@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mebelka.UA</title>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+
+    <!-- link -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- script -->
+    <script src="js/script.js" defer></script>
+</head>
+<body class="page">
+    <!-- тінь -->
+    <div class="modal-window-bg">
+        <div class="modal-window-bg__shadow"></div>
+    </div>
+
+    <!-- вхід / реєстрація / відновлення паролю -->
+    <section class="modal-window-section" id="modalPanelSection">
+        <div class="modal-window modal-panel">
+            <header class="modal-window__header">
+                <nav class="modal-panel-control">
+                    <ul class="modal-panel-control__list">
+                        <li class="modal-panel-control__form"><button class="modal-panel-control__button" type="button" id="autorizationControlButton">Вхід</button></li>
+                        <li class="modal-panel-control__form"><button class="modal-panel-control__button" type="button" id="registrationControlButton">Реєстрація</button></li>
+                        <li class="modal-panel-control__form"><button class="modal-panel-control__button" type="button" id="recoveryControlButton">Відновлення паролю</button></li>
+                    </ul>
+                </nav>
+
+                <button class="modal-window__close-button" type="button">
+                    <span></span>
+                    <span></span>
+                </button>
+            </header>
+    
+            <!-- вхід -->
+            <form action="#" method="post" class="modal-panel-form" id="autorizationForm">
+                <div class="modal-panel-form__field">
+                    <input type="email" name="user-email" class="modal-panel-form__input" id="sign_in_email" placeholder="E-mail">
+                    <label for="sign_in_email" class="modal-panel-form__label email"></label>
+                </div>
+                <div class="modal-panel-form__field">
+                    <input type="password" name="user-password" class="modal-panel-form__input" id="sign_in_password" placeholder="Пароль">
+                    <label for="sign_in_password" class="modal-panel-form__label password"></label>
+                    <button class="modal-panel-form__show-password" type="button">Показати</button>
+                </div>
+                <div class="modal-panel-form__field">
+                    <input type="submit" class="modal-panel-form__submit" value="Увійти">
+                </div>
+            </form>  
+    
+            <!-- рєстрація -->
+            <form action="" class="modal-panel-form" id="registrationForm">
+                <div class="modal-panel-form__field">
+                    <input type="email" name="user-email-new" class="modal-panel-form__input" id="sign_up_email" placeholder="E-mail">
+                    <label for="sign_up_email" class="modal-panel-form__label email"></label>
+                </div>
+                <div class="modal-panel-form__field">
+                    <input type="password" name="user-password-new" class="modal-panel-form__input" id="sign_up_password" placeholder="Пароль">
+                    <label for="sign_up_password" class="modal-panel-form__label password"></label>
+                    <button class="modal-panel-form__show-password" type="button">Показати</button>
+                </div>
+                <div class="modal-panel-form__field">
+                    <input type="password" name="user-password-new-repeat" class="modal-panel-form__input" id="sign_up_password_repeat" placeholder="Повторіть пароль">
+                    <label for="sign_up_password_repeat" class="modal-panel-form__label password"></label>
+                    <button class="modal-panel-form__show-password" type="button">Показати</button>
+                </div>
+                <div class="modal-panel-form__field">
+                    <input type="text" name="user-surname-new" class="modal-panel-form__input" id="sign_up_surname" placeholder="Прізвище (необов'язково)">
+                    <label for="sign_up_surname" class="modal-panel-form__label name"></label>
+                </div>
+                <div class="modal-panel-form__field">
+                    <input type="text" name="user-name-new" class="modal-panel-form__input" id="sign_up_name" placeholder="Ім'я">
+                    <label for="sign_up_name" class="modal-panel-form__label name"></label>
+                </div>
+                <div class="modal-panel-form__field">
+                    <input type="tel" name="user-tel-new" class="modal-panel-form__input" id="sign_up_tel" placeholder="Телефон">
+                    <label for="sign_up_tel" class="modal-panel-form__label phone"></label>
+                </div>
+                <div class="modal-panel-form__field">
+                    <input type="tel" name="user-address-new" class="modal-panel-form__input" id="sign_up_address" placeholder="Адреса доставки (необов'язково)">
+                    <label for="sign_up_address" class="modal-panel-form__label address"></label>
+                </div>
+                <div class="modal-panel-form__field">
+                    <input type="submit" class="modal-panel-form__submit" value="Створити акаунт">
+                </div>
+            </form>
+            
+            <!-- відновлення паролю -->
+            <form action="" class="modal-panel-form" id="recoveryForm">
+                <div class="modal-panel-form__field">
+                    <p class="modal-panel-form__text">Забули пароль? Будь ласка, введіть адрес вашої електронної пошти. Ви отримаєте код підтвердження зміни паролю.</p>
+                </div>
+                <div class="modal-panel-form__field">
+                    <input type="email" name="user-email-password-recovery" class="modal-panel-form__input" id="password_recovery" placeholder="E-mail">
+                    <label for="password_recovery" class="modal-panel-form__label email"></label>
+                </div>
+                <div class="modal-panel-form__field">
+                    <input type="submit" class="modal-panel-form__submit" value="Відновлення паролю">
+                </div>
+            </form> 
+        </div>
+    </section>
+
+    <!-- навігація по сайту -->
+    <section class="modal-window-section" id="siteNavSection">
+        <nav class="modal-window site-nav">
+            <header class="modal-window__header">
+                <h2 class="modal-window__title">Каталог</h2>
+
+                <button class="modal-window__close-button" type="button">
+                    <span></span>
+                    <span></span>
+                </button>
+            </header>
+            
+            <ul class="site-nav__category-list">
+                <li>
+                    <button class="site-nav__link site-nav__link_active" type="button">
+                        <img src="img/category/list.svg" height="35" alt="Категорії">
+                        <span class="site-nav__category">Категорії</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="site-nav__link" type="button">
+                        <img src="img/category/table.svg" height="35" alt="Столи">
+                        <span class="site-nav__category">Столи</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="site-nav__link" type="button">
+                        <img src="img/category/shelf.svg" height="35" alt="Полиці">
+                        <span class="site-nav__category">Полиці</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="site-nav__link" type="button">
+                        <img src="img/category/plant.svg" height="35" alt="Підставки під вазони">
+                        <span class="site-nav__category">Підставки під вазони</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="site-nav__link" type="button">
+                        <img src="img/category/wardrobe.svg" height="35" alt="Комоди / Тумби">
+                        <span class="site-nav__category">Комоди та Тумби</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="site-nav__link" type="button">
+                        <img src="img/category/chair.svg" height="35" alt="Стільці/Лавочки">
+                        <span class="site-nav__category">Стільці та Лавочки</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="site-nav__link" type="button">
+                        <img src="img/category/hanger.svg" height="35" alt="Вішалки для одягу">
+                        <span class="site-nav__category">Вішалки для одягу</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="site-nav__link" type="button">
+                        <img src="img/category/candle.svg" height="35" alt="Предмети церковного вжитку">
+                        <span class="site-nav__category">Предмети церковного вжитку</span>
+                    </button>
+                </li>
+            </ul>
+
+            <ul class="site-nav__subcategory-list">
+                <li class="site-nav__subcategory-item ">
+                    <button class="site-nav__subcategory-link" type="button">
+                        <img src="img/category/table.svg" height="35" alt="Столи" class="site-nav__subcategory-img">
+                        <span class="site-nav__subcategory">Столи</span>
+                    </button>
+                </li>
+                <li class="site-nav__subcategory-item">
+                    <button class="site-nav__subcategory-link" type="button">
+                        <img src="img/category/shelf.svg" height="35" alt="Полиці" class="site-nav__subcategory-img">
+                        <span class="site-nav__subcategory">Полиці</span>
+                    </button>
+                </li>
+                <li class="site-nav__subcategory-item">
+                    <button class="site-nav__subcategory-link" type="button">
+                        <img src="img/category/plant.svg" height="35" alt="Підставки під вазони" class="site-nav__subcategory-img">
+                        <span class="site-nav__subcategory">Підставки під вазони</span>
+                    </button>
+                </li>
+                <li class="site-nav__subcategory-item">
+                    <button class="site-nav__subcategory-link" type="button">
+                        <img src="img/category/wardrobe.svg" height="35" alt="Комоди/Тумби" class="site-nav__subcategory-img">
+                        <span class="site-nav__subcategory">Комоди та Тумби</span>
+                    </button>
+                </li>
+                <li class="site-nav__subcategory-item">
+                    <button class="site-nav__subcategory-link" type="button">
+                        <img src="img/category/chair.svg" height="35" alt="Стільці/Лавочки" class="site-nav__subcategory-img">
+                        <span class="site-nav__subcategory">Стільці та Лавочки</span>
+                    </button>
+                </li>
+                <li class="site-nav__subcategory-item">
+                    <button class="site-nav__subcategory-link" type="button">
+                        <img src="img/category/hanger.svg" height="35" alt="Вішалки для одягу" class="site-nav__subcategory-img">
+                        <span class="site-nav__subcategory">Вішалки для одягу</span>
+                    </button>
+                </li>
+                <li class="site-nav__subcategory-item">
+                    <button class="site-nav__subcategory-link" type="button">
+                        <img src="img/category/candle.svg" height="35" alt="Предмети церковного вжитку" class="site-nav__subcategory-img">
+                        <span class="site-nav__subcategory">Предмети церковного вжитку</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- кошик -->
+    <section class="modal-window-section" id="cartSection">
+        <div class="modal-window cart cart_goods">
+            <header class="modal-window__header">
+                <h2 class="modal-window__title">Кошик</h2>
+
+                <button class="modal-window__close-button" type="button">
+                    <span></span>
+                    <span></span>
+                </button>
+            </header>
+
+            <div class="cart__content">
+
+                <div class="cart-empty">
+                    <img src="img/cart/cart.svg" alt="Кошик порожній" class="cart-empty__img" width="75">
+                    <p class="cart-empty__text">У вашому кошику порожньо</p>
+
+                    <button class="cart-empty__button">До товарів</button>
+                </div>
+
+                
+                <div class="cart-goods">
+                    <ul class="cart-goods__list">
+                        <li class="cart-good">
+                            <a href="#" class="cart-good__img-link">
+                                <img src="img/2013-07-21 08.27.39.jpg" alt="" class="cart-good__img" height="150" width="150">
+                            </a>
+                            
+                            <a href="" class="cart-good__name-link">Стіл "Фенікс"</a>
+
+                            <div class="cart-good__count counter">
+                                <button class="counter__button add">-</button>
+                                <div class="counter__total">10</div>
+                                <button class="counter__button minus">+</button>
+                            </div>
+
+                            <p class="cart-good__sum">сума: <span class="cart-good__total-sum">1000</span> грн</p>
+
+                            <button class="cart-good__delete delete-button">
+                                <span class="delete-button__span"></span>
+                                <span class="delete-button__span"></span>
+                            </button>
+                        </li>
+                        <li class="cart-good">
+                            <a href="#" class="cart-good__img-link">
+                                <img src="img/2013-07-21 08.27.39.jpg" alt="" class="cart-good__img" height="150" width="150">
+                            </a>
+                            
+                            <a href="" class="cart-good__name-link">Стіл "Фенікс"</a>
+
+                            <div class="cart-good__count counter">
+                                <button class="counter__button add">-</button>
+                                <div class="counter__total">10</div>
+                                <button class="counter__button minus">+</button>
+                            </div>
+
+                            <p class="cart-good__sum">сума: <span class="cart-good__total-sum">1000</span> грн</p>
+
+                            <button class="cart-good__delete delete-button">
+                                <span class="delete-button__span"></span>
+                                <span class="delete-button__span"></span>
+                            </button>
+                        </li>
+                        <li class="cart-good">
+                            <a href="#" class="cart-good__img-link">
+                                <img src="img/2013-07-21 08.27.39.jpg" alt="" class="cart-good__img" height="150" width="150">
+                            </a>
+                            
+                            <a href="" class="cart-good__name-link">Стіл "Фенікс"</a>
+
+                            <div class="cart-good__count counter">
+                                <button class="counter__button add">-</button>
+                                <div class="counter__total">10</div>
+                                <button class="counter__button minus">+</button>
+                            </div>
+
+                            <p class="cart-good__sum">сума: <span class="cart-good__total-sum">1000</span> грн</p>
+
+                            <button class="cart-good__delete delete-button">
+                                <span class="delete-button__span"></span>
+                                <span class="delete-button__span"></span>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <button class="cart-goods__continue">Продовжити</button>
+                    <button class="cart-goods__buy">Оформити замовлення</button>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- шапка -->
+    <header class="page__header header">
+        <div class="container header__top-panel">
+
+            <!-- вхід / реєстрація -->
+            <div class="user-panel">
+                <button class="user-panel__autorization" id="autorization" type="button">вхід</button>
+                <span class="user-panel__decoration">/</span>
+                <button class="user-panel__registration" id="registration" type="button">реєстрація</button>
+            </div>
+
+            <!-- інформація сайту -->
+            <nav class="user-support">
+                <ul class="user-support__list">
+                    <li><a href="#" class="user-support__link">Доставка та оплата</a></li>
+                    <li><span class="user-support__decoration">|</span></li>
+                    <li><a href="#" class="user-support__link">Контакти</a></li>
+                    <li><span class="user-support__decoration">|</span></li>
+                    <li><a href="#" class="user-support__link">Про нас</a></li>
+                </ul>
+            </nav>
+
+            <!-- кнопка виклику вибору мови -->
+            <button class="language">
+                <img src="img/flags/ukraine.svg" alt="UA" width="45" height="35" class="language__img">
+                <span class="language__abbreviation">UA</span>
+            </button>
+
+            <!-- вибір мови -->
+            <nav class="choose-language">
+                <ul class="choose-language__list">
+                    <li class="choose-language__item">
+                        <a href="#" class="choose-language__link">
+                            <img src="img/flags/ukraine.svg" alt="UA"width="45" height="35" class="choose-language__img">
+                            <span class="choose-language__abbreviation">UA</span>
+                        </a>
+                    </li>
+                    <li class="choose-language__item">
+                        <a href="#" class="choose-language__link">
+                            <img src="img/flags/russia.svg" alt="RU" width="45" height="35" class="choose-language__img">
+                            <span class="choose-language__abbreviation">RU</span>
+                        </a>
+                    </li>
+                    <li class="choose-language__item">
+                        <a href="#" class="choose-language__link">
+                            <img src="img/flags/united-kingdom.svg" alt="EN" width="45" height="35" class="choose-language__img">
+                            <span class="choose-language__abbreviation">EN</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container header__main-panel">
+            <!-- логотип -->
+            <a href="#" class="header__logo logo">Mebellka.<span class="logo__decoration">UA</span></a>
+
+            <!-- кнопка виклику каталогу -->
+            <button class="header__catalog" type="button" id="siteNav">каталог</button>
+
+            <!-- пошук по сайт-->
+            <form action="" class="header__form search-form">
+                <input type="text" name="search" class="search-form__input" placeholder="Пошук по сайту...">
+                <input type="submit" value=" " class="search-form__submit">
+            </form>
+
+            <!-- кнопка виклику кошику-->
+            <button class="header__bag bag" id="bag">
+                <div class="bag__content">0 Речей: <span class="bag__sum"> 0.00 грн</span></div>
+            </button>    
+        </div>
+    </header>
+
+
+</body>
+</html>

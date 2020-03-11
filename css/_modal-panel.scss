@@ -1,0 +1,148 @@
+/* вхід / реєстрація / відновлення паролю */
+.modal-panel{
+    width: 650px;
+}
+
+/* контроль модального вікна */
+.modal-panel-control{
+    flex-grow: 1;
+
+    &__list{
+        @extend %list;
+        display: flex;
+    }
+    &__form{
+        flex-grow: 1;
+    }
+    &__button{
+        @extend %buttons;
+        height: 35px;
+        width: 100%;
+
+        background-color: $color-bg-second;
+        color: $color-third;
+
+        transition: .3s;
+
+        &_active, &:hover{
+            background-color: $color-bg-first;
+            color: $color-first;
+        }
+    }
+}
+
+/* форма модального вікна */
+.modal-panel-form{
+    display: none;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    padding: 25px;
+    background-color: $color-bg-first;
+
+    &_active{
+        display: flex;
+    }
+
+    &__field{
+        width: 100%;
+        position: relative;
+
+        &:not(:first-child){
+            margin-top: 25px;
+        }
+    }
+    &__input{
+        width: 100%;
+        height: 40px;
+
+        padding-left: 45px;
+
+        border: none;
+        border-bottom: 1px solid $color-bg-second;
+        background-color: inherit;
+        color: $color-bg-second;
+
+        &::placeholder{
+            color: $color-bg-second;
+            opacity: 1;
+        }
+    }
+    &__label{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 40px;
+        height: 40px;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+    }
+
+    &__show-password{
+        @extend %buttons;
+
+        display: block;
+        height: 70%;
+        width: 100px;
+
+        position: absolute;
+        top: 15%;
+        right: 0;
+
+        border-left: 1px solid $color-bg-second;
+        
+        background-color: inherit;
+        color: $color-bg-second;
+
+        transition: .3s;
+
+        &:hover{
+            background-color: $color-bg-second;
+            color: $color-third;
+        }
+    }
+    &__submit{
+        @extend %buttons;
+
+        width: 100%;
+        height: 40px;
+
+        background-color: $color-third;
+        color: $color-bg-second;
+
+        transition: .3s;
+
+        font-size: 18px;
+        font-weight: 500;
+
+        &:hover{
+            background-color: $color-fourth;
+            color: $color-second;
+        }
+    }
+    &__text{
+        text-align: center;
+        color: $color-first;
+    }
+}
+
+
+.email{
+    background-image: url(../img/modal-panel/email.svg);
+}
+.password{
+    background-image: url(../img/modal-panel/key.svg);
+}
+.name{
+    background-image: url(../img/modal-panel/name.svg);
+}
+.phone{
+    background-image: url(../img/modal-panel/phone.svg);
+}
+.address{
+    background-image: url(../img/modal-panel/home.svg);
+}

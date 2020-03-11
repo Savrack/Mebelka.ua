@@ -1,0 +1,224 @@
+// Кошик
+.cart{
+    min-height: 350px;
+
+    background-color: $color-bg-first;
+
+    position: relative;
+
+    &_empty{
+        width: 600px;
+    }
+    &_goods{
+        width: 900px;
+    }
+
+    &__content{
+        width: 100%;
+        height: calc(100% - 35px);
+
+        padding: 25px;
+    }
+}
+
+.cart-empty{
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    &__text{
+        margin-top: 25px;
+        font-size: 18px;
+
+        color: rgba(55, 54, 54, 1);
+    }
+
+    &__button{
+        @extend %buttons;
+
+        background-color: $color-third;
+        color: rgba(55, 54, 54, 1);
+
+        padding: 10px 25px;
+
+        margin-top: 25px;
+
+        font-size: 22px;
+        font-weight: 500;
+
+        transition: .3s;
+
+        &:hover{
+            color: $color-second;
+            background-color: $color-third;
+        }
+    }
+}
+
+.cart-goods{
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__list{
+        @extend %list;
+
+        width: 100%;
+
+        border-top: 2px solid $color-bg-second;
+
+        padding-bottom: 25px;
+    }
+
+    &__continue, &__buy{
+        @extend %buttons;
+
+        color: $color-bg-second;
+        
+        padding: 10px 25px;
+
+        font-size: 20px;
+
+        transition: .3s;
+
+        &:hover{
+            color: $color-bg-first;
+        }
+    }
+
+    &__continue{
+        background-color: $color-third;
+
+        &:hover{
+            background-color: $color-fourth;
+        }
+    }
+
+    &__buy{
+        background-color: $color-third;
+    }
+}
+
+.cart-good{
+    display: flex;
+    align-items: center;
+
+    padding: 15px;
+
+    border-bottom: 2px solid $color-bg-second;
+
+    &__name-link{
+        display: block;
+
+        margin-left: 25px;
+        margin-right: 25px;
+
+        font-size: 20px;
+        font-weight: 500;
+        
+        color: $color-bg-second;
+
+        text-decoration: none;
+
+        transition: .3s;
+
+        &:hover{
+            color: $color-fourth;
+        }
+    }
+    
+    &__count{
+        margin-left: auto;
+
+        flex-shrink: 0;
+    }
+
+    &__sum{
+        margin-left: 25px;
+
+        flex-shrink: 0;
+    }
+
+    &__delete{
+        margin-left: 50px;
+
+        flex-shrink: 0;
+    }
+}
+
+.counter{
+    display: flex;
+    align-items: center;
+
+    &__total{
+        margin-left: 15px;
+        margin-right: 15px;
+        
+        color: $color-bg-second;
+    }
+
+    &__button{
+        @extend %buttons;
+
+        width: 30px;
+        height: 30px;
+
+        background-color: $color-third;
+        color: $color-bg-second;
+
+        font-size: 18px;
+
+        transition: .3s;
+
+        &:hover{
+            color: $color-bg-first;
+            background-color: $color-fourth;
+        }
+    }
+}
+
+/* видалення товару в кошику*/
+.delete-button{
+    @extend %buttons;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: $color-third;
+
+    position: relative;
+
+    &__span{
+        display: block;
+        width: 15px;
+        height: 2px;
+
+        background-color: $color-bg-second;
+
+        position: absolute;
+        transition: .3s;
+    
+        &:first-child{
+            transform: rotate(45deg);
+        }
+        &:last-child{
+            transform: rotate(-45deg);
+        }
+    }
+
+    &:hover &__span{
+        background-color: $color-bg-first;
+    }
+}

@@ -1,0 +1,129 @@
+/* модальне вікно */
+.site-nav{
+    max-width: 1170px;
+
+    display: flex;
+    
+    position: relative;
+
+
+    /* список категорій */
+    &__category-list{
+        @extend %list;
+
+        width: 35%;
+
+        border-right: 3px solid $color-third;
+        margin-top: 15px;
+
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    &__link{
+        @extend %buttons;
+        width: calc(100% + 3px);
+        height: 70px;
+
+        display: flex;
+        align-items: center;
+
+        padding-left: 25px;
+
+        border-left: 3px solid rgba(0, 0, 0, 0);
+        border-top: 3px solid rgba(0, 0, 0, 0);
+        border-right: none;
+        border-bottom: 3px solid rgba(0, 0, 0, 0);
+
+        transition: .3s;
+
+        &:hover, &_active{
+            background-color: $color-bg-first;
+
+            border-left: 3px solid $color-third;
+            border-top: 3px solid $color-third;
+            border-right: none;
+            border-bottom: 3px solid $color-third;
+
+        }
+    }
+    &__category{
+        font-size: 18px;
+
+        margin-left: 25px;
+
+        color: $color-bg-second;
+    }
+
+    /* список підкатегорій */
+    &__subcategory-list{
+        @extend %list;
+
+        width: 65%;
+        padding: 15px;
+
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 165px;
+    }
+    &__subcategory-item{
+        &_big{
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+    }
+    &__subcategory-link{
+        @extend %buttons;
+        width: 100%;
+        height: 100%;
+
+        padding: 10px;
+
+        border-top: 3px solid rgba(0, 0, 0, 0);
+        border-left: 3px solid rgba(0, 0, 0, 0);
+        border-bottom: 3px solid $color-third;
+        border-right: 3px solid rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.1);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        transition: .3s;
+
+
+        &:hover{
+            border-color: $color-third;
+            background-color: $color-third;
+        }
+    }
+    &__subcategory-img{
+        height: 65%;
+
+        transition: .3s;
+    }
+    &__subcategory-link:hover &__subcategory-img{
+        opacity: 0;
+        height: 0px;
+    }
+    &__subcategory{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 35%;
+
+        font-size: 16px;
+
+        color: $color-bg-second;
+
+        transition: .3s;
+    }
+    &__subcategory-link:hover &__subcategory{
+        height: 100%;
+
+        font-size: 28px;
+        font-weight: 500;
+    }
+}
+

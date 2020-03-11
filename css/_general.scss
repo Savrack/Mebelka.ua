@@ -1,0 +1,143 @@
+*{
+    font-family: $font-family-first;
+    font-weight: 400;
+    font-size: 16px;
+
+    box-sizing: border-box;
+}
+.page{
+    background-color: $color-bg-first;
+    height: 10000px;
+
+    &__header{
+        background-color: $color-bg-second;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.container{
+    max-width: 1170px;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    position: relative;
+}
+
+// Тінь модального вікна
+.modal-window-bg{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: $color-bg-first;
+
+    display: none;
+
+    &_show{
+        display: flex;
+    }
+
+    &__shadow{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+
+// Модальне вікно
+.modal-window-section{
+    position: absolute;
+    top: 100px;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    display: none;
+    justify-content: center;
+
+    &_show{
+        display: flex;
+    }
+}
+.modal-window{
+    background-color: $color-bg-first;
+    
+    display: flex;
+    flex-wrap: wrap;
+
+    &__header{
+        height: 35px;
+        width: 100%;
+
+        background-color: $color-bg-second;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title{
+        display: inline-flex;
+        align-items: center;
+
+        height: 100%;
+
+        padding-left: 25px;
+        padding-right: 25px;
+
+        margin-top: 0;
+        margin-bottom: 0;
+
+        background-color: $color-bg-first;
+
+        font-size: 22px;     
+    }
+
+    &__close-button{
+        @extend %buttons;
+    
+        height: 35px;
+        width: 50px;
+    
+        background-color: $color-fourth;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        position: relative;
+    
+        span{
+            display: block;
+            width: 30px;
+            height: 2px;
+        
+            background-color: $color-bg-second;
+        
+            position: absolute;
+            transition: .3s;
+        
+            &:first-child{
+                transform: rotate(45deg);
+            }
+            &:last-child{
+                transform: rotate(-45deg);
+            }
+        }
+        &:hover span{
+            background-color: $color-bg-first;
+        }
+    }
+}
+

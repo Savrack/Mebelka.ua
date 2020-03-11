@@ -1,0 +1,287 @@
+.header{
+    background-color: $color-bg-second;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+    .container{
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__top-panel{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__main-panel{
+        padding-bottom: 25px;
+    }
+
+    &__logo{
+        margin-right: 25px;
+    }
+
+    /* кнопка виклику каталогу */
+    &__catalog{
+        @extend %buttons;
+
+        background-color: $color-bg-second;
+        color: $color-third;
+    
+        border: 1px solid $color-third;
+    
+        font-weight: 500;
+    
+        width: 130px;
+        height: 45px;
+    
+        margin-right: auto;
+    
+        text-transform: uppercase;
+        transition: .3s;
+    
+        &:hover{
+            background-color: $color-third;
+            color: $color-second;
+        }
+    }
+
+    &__form{
+        height: 45px;
+        margin-right: 25px;
+    }
+    &__bag{
+        height: 45px;
+    }
+}
+
+/* вхід / реєстрація */
+.user-panel{
+    margin-right: auto;
+
+    &__decoration{
+        margin-left: 10px;
+        margin-right: 10px;
+
+        color: $color-third;
+    }
+
+    &__autorization, &__registration{
+        @extend %buttons;
+
+        border-bottom: 1px dashed $color-bg-second;
+
+        text-transform: capitalize;
+
+        padding: 0;
+        color: $color-third;
+
+        &:hover{
+            border-color: $color-third;
+        }
+    }
+}
+
+/* інформація сайту */
+.user-support{
+
+    &__list{
+        @extend %list;
+        display: flex;
+    }
+    &__link{
+        color: $color-third;
+        text-decoration: none;
+
+        margin-right: 25px;
+
+        border-bottom: 1px dashed $color-bg-second;
+
+        &:hover{
+            border-color: $color-third;
+        }
+    }
+    &__decoration{
+        color: $color-third;
+
+        margin-right: 25px;
+    }
+}
+
+/* кнопка виклику вибору мови */
+.language{
+    @extend %buttons;
+
+    display: flex;
+    align-items: center;
+
+    &__img{
+        object-fit: cover;
+        
+        margin-right: 10px;
+    }
+
+    &__abbreviation{
+        color: $color-third;
+
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &:hover &__abbreviation{
+        text-decoration: underline;
+    }
+}
+
+/* вибір мови */
+.choose-language{
+    display: none;
+
+    position: absolute;
+    top: 50px;
+    right: 5px;
+
+    padding: 20px;
+
+    z-index: 2;
+
+    background-color: $color-bg-second;
+    box-shadow: 0 0 10px $color-bg-second;
+
+    &__list{
+        @extend %list;
+    }
+
+    &__link{
+        text-decoration: none;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__link:hover &__abbreviation{
+        text-decoration: underline;
+    }
+    
+    &__img{
+        object-fit: cover;
+        
+        margin-right: 10px;
+    }
+
+    &__abbreviation{
+        color: $color-third;
+
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+
+}
+
+/* логотип */
+.logo{
+    font-size: 32px;
+    font-weight: 600;
+
+    color: $color-second;
+
+    text-decoration: none;
+
+    &__decoration{
+        font-size: 32px;
+        font-weight: 600;
+        
+        color: $color-third;
+    }
+}
+
+/* пошук по сайту */
+.search-form{
+    display: flex;
+    
+    &__input{
+        height: 100%;
+        width: 300px;
+
+        padding-left: 10px;
+
+        background-color: inherit;
+        color: $color-second;
+
+        border: none;
+        border-bottom: 1px solid $color-third;
+
+        transition: .3s;
+
+        &:focus{
+            color: $color-third;
+
+            &::placeholder{
+                color: $color-third;
+            }
+        }
+        &::placeholder{
+            color: $color-second;
+            opacity: 1;
+        }
+    }
+    &__submit{
+        @extend %buttons;
+        height: 100%;
+        width: 45px;
+
+        background-color: $color-third;
+        background-image: url(../img/header/search.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+
+        &:hover{
+            background-image: url(../img/header/search-hover.svg);
+        }
+    }
+}
+
+/* кошик */
+.bag{
+    @extend %buttons;
+
+    border: 1px solid $color-third;
+
+    background-image: url(../img/header/bag.svg);
+    background-position: calc(100% - 7px) center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+
+    padding-right: 44px;
+    padding-left: 0;
+
+    transition: .3s;
+
+    &:hover {
+        background-color: $color-third;
+        background-image: url(../img/header/bag-hover.svg);
+    }
+
+    &__content{
+        height: 100%;
+        border-right: 1px solid $color-third;
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+        color: $color-second;
+        background-color: $color-bg-second;
+
+        display: flex;
+        align-items: center;
+    }
+    &__sum{
+        display: inline-block;
+        padding-left: 5px;
+
+        color: $color-fourth;
+    }
+
+
+}
