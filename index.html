@@ -25,6 +25,8 @@
     <section class="modal-window-section" id="modalPanelSection">
         <div class="modal-window modal-panel">
             <header class="modal-window__header">
+
+                <!-- контроль модального вікна -->
                 <nav class="modal-panel-control">
                     <ul class="modal-panel-control__list">
                         <li class="modal-panel-control__form"><button class="modal-panel-control__button" type="button" id="autorizationControlButton">Вхід</button></li>
@@ -120,99 +122,101 @@
                 </button>
             </header>
             
-            <ul class="site-nav__category-list">
+            <!-- список категорій -->
+            <ul class="site-nav-category" id="siteNavCategory">
                 <li>
-                    <button class="site-nav__link site-nav__link_active" type="button">
-                        <img src="img/category/list.svg" height="35" alt="Категорії">
-                        <span class="site-nav__category">Категорії</span>
-                    </button>
+                    <a href="#" class="site-nav-category__link">
+                        <img src="img/category/list.svg" alt="Категорії" width="35" height="35">
+                        <span class="site-nav-category__text">Категорії</span>
+                    </a>
                 </li>
                 <li>
-                    <button class="site-nav__link" type="button">
-                        <img src="img/category/table.svg" height="35" alt="Столи">
-                        <span class="site-nav__category">Столи</span>
-                    </button>
+                    <a href="#" class="site-nav-category__link">
+                        <img src="img/category/table.svg" alt="Столи" width="35" height="35">
+                        <span class="site-nav-category__text">Столи</span>
+                    </a>
                 </li>
                 <li>
-                    <button class="site-nav__link" type="button">
-                        <img src="img/category/shelf.svg" height="35" alt="Полиці">
-                        <span class="site-nav__category">Полиці</span>
-                    </button>
+                    <a href="#" class="site-nav-category__link">
+                        <img src="img/category/shelf.svg" alt="Полиці" width="35" height="35">
+                        <span class="site-nav-category__text">Полиці</span>
+                    </a>
                 </li>
                 <li>
-                    <button class="site-nav__link" type="button">
-                        <img src="img/category/plant.svg" height="35" alt="Підставки під вазони">
-                        <span class="site-nav__category">Підставки під вазони</span>
-                    </button>
+                    <a href="#" class="site-nav-category__link">
+                        <img src="img/category/plant.svg" alt="Підставки під вазони" width="35" height="35">
+                        <span class="site-nav-category__text">Підставки під вазони</span>
+                    </a>
                 </li>
                 <li>
-                    <button class="site-nav__link" type="button">
-                        <img src="img/category/wardrobe.svg" height="35" alt="Комоди / Тумби">
-                        <span class="site-nav__category">Комоди та Тумби</span>
-                    </button>
+                    <a href="#" class="site-nav-category__link">
+                        <img src="img/category/wardrobe.svg" alt="Комоди та Тумби" width="35" height="35">
+                        <span class="site-nav-category__text">Комоди та Тумби</span>
+                    </a>
                 </li>
                 <li>
-                    <button class="site-nav__link" type="button">
-                        <img src="img/category/chair.svg" height="35" alt="Стільці/Лавочки">
-                        <span class="site-nav__category">Стільці та Лавочки</span>
-                    </button>
+                    <a href="#" class="site-nav-category__link">
+                        <img src="img/category/chair.svg" alt="Стільці та Лавочки" width="35" height="35">
+                        <span class="site-nav-category__text">Стільці та Лавочки</span>
+                    </a>
                 </li>
                 <li>
-                    <button class="site-nav__link" type="button">
-                        <img src="img/category/hanger.svg" height="35" alt="Вішалки для одягу">
-                        <span class="site-nav__category">Вішалки для одягу</span>
-                    </button>
+                    <a href="#" class="site-nav-category__link">
+                        <img src="img/category/hanger.svg" alt="Вішалки для одягу" width="35" height="35">
+                        <span class="site-nav-category__text">Вішалки для одягу</span>
+                    </a>
                 </li>
                 <li>
-                    <button class="site-nav__link" type="button">
-                        <img src="img/category/candle.svg" height="35" alt="Предмети церковного вжитку">
-                        <span class="site-nav__category">Предмети церковного вжитку</span>
-                    </button>
+                    <a href="#" class="site-nav-category__link">
+                        <img src="img/category/candle.svg" alt="Предмети церковного вжитку" width="35" height="35">
+                        <span class="site-nav-category__text">Предмети церковного вжитку</span>
+                    </a>
                 </li>
             </ul>
 
-            <ul class="site-nav__subcategory-list">
-                <li class="site-nav__subcategory-item ">
-                    <button class="site-nav__subcategory-link" type="button">
-                        <img src="img/category/table.svg" height="35" alt="Столи" class="site-nav__subcategory-img">
-                        <span class="site-nav__subcategory">Столи</span>
-                    </button>
+            <!-- список підкатегорій -->
+            <ul class="site-nav-subcategory">
+                <li class="site-nav-subcategory__item">
+                    <a href="#" class="site-nav-subcategory__link">
+                        <img src="img/category/table.svg" alt="Столи" class="site-nav-subcategory__img" height="35">
+                        <span class="site-nav-subcategory__text">Столи</span>
+                    </a>
                 </li>
-                <li class="site-nav__subcategory-item">
-                    <button class="site-nav__subcategory-link" type="button">
-                        <img src="img/category/shelf.svg" height="35" alt="Полиці" class="site-nav__subcategory-img">
-                        <span class="site-nav__subcategory">Полиці</span>
-                    </button>
+                <li class="site-nav-subcategory__item">
+                    <a href="#" class="site-nav-subcategory__link">
+                        <img src="img/category/shelf.svg" alt="Полиці" class="site-nav-subcategory__img" height="35">
+                        <span class="site-nav-subcategory__text">Полиці</span>
+                    </a>
                 </li>
-                <li class="site-nav__subcategory-item">
-                    <button class="site-nav__subcategory-link" type="button">
-                        <img src="img/category/plant.svg" height="35" alt="Підставки під вазони" class="site-nav__subcategory-img">
-                        <span class="site-nav__subcategory">Підставки під вазони</span>
-                    </button>
+                <li class="site-nav-subcategory__item">
+                    <a href="#" class="site-nav-subcategory__link">
+                        <img src="img/category/plant.svg" alt="Підставки під вазони" class="site-nav-subcategory__img" height="35">
+                        <span class="site-nav-subcategory__text">Підставки під вазони</span>
+                    </a>
                 </li>
-                <li class="site-nav__subcategory-item">
-                    <button class="site-nav__subcategory-link" type="button">
-                        <img src="img/category/wardrobe.svg" height="35" alt="Комоди/Тумби" class="site-nav__subcategory-img">
-                        <span class="site-nav__subcategory">Комоди та Тумби</span>
-                    </button>
+                <li class="site-nav-subcategory__item">
+                    <a href="#" class="site-nav-subcategory__link">
+                        <img src="img/category/wardrobe.svg" alt="Комоди та Тумби" class="site-nav-subcategory__img" height="35">
+                        <span class="site-nav-subcategory__text">Комоди та Тумби</span>
+                    </a>
                 </li>
-                <li class="site-nav__subcategory-item">
-                    <button class="site-nav__subcategory-link" type="button">
-                        <img src="img/category/chair.svg" height="35" alt="Стільці/Лавочки" class="site-nav__subcategory-img">
-                        <span class="site-nav__subcategory">Стільці та Лавочки</span>
-                    </button>
+                <li class="site-nav-subcategory__item">
+                    <a href="#" class="site-nav-subcategory__link">
+                        <img src="img/category/chair.svg" alt="Стільці та Лавочки" class="site-nav-subcategory__img" height="35">
+                        <span class="site-nav-subcategory__text">Стільці та Лавочки</span>
+                    </a>
                 </li>
-                <li class="site-nav__subcategory-item">
-                    <button class="site-nav__subcategory-link" type="button">
-                        <img src="img/category/hanger.svg" height="35" alt="Вішалки для одягу" class="site-nav__subcategory-img">
-                        <span class="site-nav__subcategory">Вішалки для одягу</span>
-                    </button>
+                <li class="site-nav-subcategory__item">
+                    <a href="#" class="site-nav-subcategory__link">
+                        <img src="img/category/hanger.svg" alt="Вішалки для одягу" class="site-nav-subcategory__img" height="35">
+                        <span class="site-nav-subcategory__text">Вішалки для одягу</span>
+                    </a>
                 </li>
-                <li class="site-nav__subcategory-item">
-                    <button class="site-nav__subcategory-link" type="button">
-                        <img src="img/category/candle.svg" height="35" alt="Предмети церковного вжитку" class="site-nav__subcategory-img">
-                        <span class="site-nav__subcategory">Предмети церковного вжитку</span>
-                    </button>
+                <li class="site-nav-subcategory__item">
+                    <a href="#" class="site-nav-subcategory__link">
+                        <img src="img/category/candle.svg" alt="Предмети церковного вжитку" class="site-nav-subcategory__img" height="35">
+                        <span class="site-nav-subcategory__text">Предмети церковного вжитку</span>
+                    </a>
                 </li>
             </ul>
         </nav>

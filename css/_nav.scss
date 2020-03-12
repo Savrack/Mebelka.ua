@@ -1,14 +1,13 @@
-/* модальне вікно */
+// модальне вікно
 .site-nav{
     max-width: 1170px;
 
     display: flex;
-    
+
     position: relative;
 
-
-    /* список категорій */
-    &__category-list{
+    // список категорій
+    &-category{
         @extend %list;
 
         width: 35%;
@@ -17,44 +16,47 @@
         margin-top: 15px;
 
         background-color: rgba(0, 0, 0, 0.1);
-    }
-    &__link{
-        @extend %buttons;
-        width: calc(100% + 3px);
-        height: 70px;
 
-        display: flex;
-        align-items: center;
+        &__link{
+            width: calc(100% + 3px);
+            height: 70px;
 
-        padding-left: 25px;
+            display: flex;
+            align-items: center;
 
-        border-left: 3px solid rgba(0, 0, 0, 0);
-        border-top: 3px solid rgba(0, 0, 0, 0);
-        border-right: none;
-        border-bottom: 3px solid rgba(0, 0, 0, 0);
+            padding-left: $padding;
 
-        transition: .3s;
-
-        &:hover, &_active{
-            background-color: $color-bg-first;
-
-            border-left: 3px solid $color-third;
-            border-top: 3px solid $color-third;
+            border-left: 3px solid rgba(0, 0, 0, 0);
+            border-top: 3px solid rgba(0, 0, 0, 0);
             border-right: none;
-            border-bottom: 3px solid $color-third;
+            border-bottom: 3px solid rgba(0, 0, 0, 0);
 
+            transition: .3s;
+
+            text-decoration: none;
+
+            &:hover, &_active{
+                background-color: $color-bg-first;
+
+                border-left: 3px solid $color-third;
+                border-top: 3px solid $color-third;
+                border-right: none;
+                border-bottom: 3px solid $color-third;
+
+            }
+        }
+
+        &__text{
+            font-size: 18px;
+
+            margin-left: 25px;
+    
+            color: $color-bg-second;
         }
     }
-    &__category{
-        font-size: 18px;
 
-        margin-left: 25px;
-
-        color: $color-bg-second;
-    }
-
-    /* список підкатегорій */
-    &__subcategory-list{
+    // список підкатегорій
+    &-subcategory{
         @extend %list;
 
         width: 65%;
@@ -64,66 +66,77 @@
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: 165px;
-    }
-    &__subcategory-item{
-        &_big{
-            grid-column: 1 / 3;
-            grid-row: 1 / 3;
+
+        &__item{
+            &_big{
+                grid-column: 1 / 3;
+                grid-row: 1 / 3;
+            }
         }
-    }
-    &__subcategory-link{
-        @extend %buttons;
-        width: 100%;
-        height: 100%;
 
-        padding: 10px;
+        &__link{
+            width: 100%;
+            height: 100%;
+    
+            padding: 10px;
+    
+            border-top: 3px solid rgba(0, 0, 0, 0);
+            border-left: 3px solid rgba(0, 0, 0, 0);
+            border-bottom: 3px solid $color-third;
+            border-right: 3px solid rgba(0, 0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.1);
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            transition: .3s;
 
-        border-top: 3px solid rgba(0, 0, 0, 0);
-        border-left: 3px solid rgba(0, 0, 0, 0);
-        border-bottom: 3px solid $color-third;
-        border-right: 3px solid rgba(0, 0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.1);
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        transition: .3s;
-
-
-        &:hover{
-            border-color: $color-third;
-            background-color: $color-third;
+            text-decoration: none;
+    
+    
+            &:hover{
+                border-color: $color-third;
+                background-color: $color-third;
+            }
         }
-    }
-    &__subcategory-img{
-        height: 65%;
 
-        transition: .3s;
-    }
-    &__subcategory-link:hover &__subcategory-img{
-        opacity: 0;
-        height: 0px;
-    }
-    &__subcategory{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        &__img{
+            height: 65%;
+    
+            transition: .3s;
+        }
 
-        height: 35%;
+        &__text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        font-size: 16px;
+            height: 35%;
+            width: 100%;
 
-        color: $color-bg-second;
+            font-size: 16px;
 
-        transition: .3s;
-    }
-    &__subcategory-link:hover &__subcategory{
-        height: 100%;
+            color: $color-bg-second;
 
-        font-size: 28px;
-        font-weight: 500;
+            text-align: center;
+
+            transition: .3s;
+        }
+
+        &__link:hover &__img{
+            opacity: 0;
+            height: 0px;
+        }
+
+        &__link:hover &__text{
+            height: 100%;
+
+            font-size: 28px;
+            font-weight: 500;
+        }
     }
 }
+
 

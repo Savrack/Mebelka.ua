@@ -21,8 +21,8 @@
     margin-left: auto;
     margin-right: auto;
 
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: $padding;
+    padding-right: $padding;
 
     display: flex;
     flex-wrap: wrap;
@@ -93,8 +93,8 @@
 
         height: 100%;
 
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: $padding;
+        padding-right: $padding;
 
         margin-top: 0;
         margin-bottom: 0;

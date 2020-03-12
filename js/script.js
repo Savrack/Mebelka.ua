@@ -116,10 +116,12 @@ function closeModalWindow(){
  */
 
 let siteNavSection = document.getElementById('siteNavSection');
+let siteNavActiveLink = 0;
+let siteNavLinkList = siteNavSection.querySelectorAll('.site-nav-category__link');
 let siteNav = document.getElementById('siteNav');
     siteNav.addEventListener('click', function (){
         modalWindowBG();
-
+        siteNavLinkList[0].classList.add('site-nav-category__link_active');
         siteNavSection.classList.add('modal-window-section_show');
 
         let closeModalWindow = siteNavSection.querySelector('.modal-window__close-button');
@@ -128,6 +130,20 @@ let siteNav = document.getElementById('siteNav');
             modalWindowBG();
         }
     });
+
+
+    siteNavLinkList.forEach(element => {
+        element.addEventListener('mouseover', function(){
+            this.classList.remove('site-nav-category__link_active');
+        });
+
+        
+
+    });
+
+
+
+
 
 
 /*
