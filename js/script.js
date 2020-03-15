@@ -168,50 +168,6 @@ let cart = document.getElementById('bag');
     });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // добавлємо | ховаємо тінь
 function modalWindowBG(){
     document.querySelector('.modal-window-bg').classList.toggle('modal-window-bg_show');
@@ -222,3 +178,62 @@ function openModalWindow(){
     modalWindowBG();
     modalWindow.classList.add('modal-window-section_show');
 }
+
+
+
+
+
+
+/*
+ *
+ *
+ * слайдер
+ * 
+ *
+ */
+class Slider{
+    _sliderContainer;
+
+    _sliderContentArr;
+    _sliderCurrentContentIndex = 0;
+    _sliderContentMaxIndex;
+
+    _sliderButtonControl;
+
+
+
+
+    constructor (sliderContainer){
+        this._sliderContainer = document.getElementById(sliderContainer);
+
+        this._sliderButtonControl = this._sliderContainer.querySelectorAll('.slider__control');
+        this._sliderContentArr = this._sliderContainer.querySelectorAll('.slider__item');
+        this._sliderContentMaxIndex = this._sliderContentArr.length - 1;
+        
+
+        this._sliderButtonControl[0].onclick = () =>{
+            this._sliderContentArr[this._sliderCurrentContentIndex].classList.add('slider__item_next');
+            this._sliderContentArr[--this._sliderCurrentContentIndex].classList.remove('slider__item_prev');
+        };
+
+        this._sliderButtonControl[1].onclick = () =>{
+            this._sliderContentArr[this._sliderCurrentContentIndex].classList.add('slider__item_prev');
+            this._sliderContentArr[++this._sliderCurrentContentIndex].classList.remove('slider__item_next');
+        };
+    }
+}
+
+let mainPageSlider = new Slider('mainPageSlider');
+
+
+
+
+
+
+
+
+
+
+
+
+
