@@ -1,16 +1,7 @@
 .index-page-nav{
     @extend %sections;
 
-    &__title{
-        width: 100%;
 
-        font-size: 26px;
-        font-weight: 700;
-
-        margin: 0;
-
-        color: $color-bg-second;
-    }
 
     &-category{
         display: grid;
@@ -23,7 +14,7 @@
         list-style: none;
 
         padding-left: 0;
-        margin-top: 25px;
+        margin-top: 0;
 
         &__item{
             width: 100%;

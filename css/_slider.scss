@@ -42,7 +42,7 @@
 
         z-index: 2;
 
-        background-color: rgba(0, 0, 0, 0.35);
+        background-color: rgba(0, 0, 0, 0.05);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -60,5 +60,196 @@
             right: 25px;
             background-image: url(../img/slider/arrow_right.svg);
         }
+    }
+}
+
+
+
+.advertisement{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    background-color: $color-second;
+
+    &__img{
+        max-height: 500px;
+        max-width: 40%;
+
+        padding-left: 35px;
+    }
+
+    // шапочка слайдера-реклами
+    &__header{
+        width: 60%;
+        height: 35%;
+        background-color: $color-bg-second;
+        border-bottom-left-radius: 100%;
+
+        padding-left: 50px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+    }
+
+    // заголовок
+    &__title{
+        width: 100%;
+        height: 40px;
+
+        display: flex;
+        justify-content: center;
+
+        margin-top: 25px;
+        margin-bottom: 0;
+
+        & > a{
+            font-size: 30px;
+
+            color: $color-third;
+
+            text-decoration: none;
+
+            &:hover{
+                color: $color-fourth;
+            }
+        }
+    }
+    &__hr{
+        width: 75%;
+
+        border: none;
+        border-bottom: 1px solid $color-third;
+
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    // ціна та кнопка дізнатися більше
+    &__price{
+        width: 50%;
+        height: 55px;
+
+        margin-top: 20px;
+        margin-right: 15px;
+
+        background-color: $color-second;
+        
+        border: 3px solid $color-third;
+
+        display: flex;
+    }
+    &__numbers{
+        width: 55%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+
+        font-size: 18px;
+        color: $color-bg-second;
+    }
+    &__link{
+        width: 45%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-decoration: none;
+
+        background-color: $color-third;
+        color: $color-bg-second;
+
+        font-size: 20px;
+
+
+        &:hover{
+            background-color: $color-fourth;
+        }
+
+    }
+
+    &__information{
+        width: 60%;
+        height: 65%;
+
+        padding: 0 50px;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    &__client{
+        width: 140px;
+        height: 40px;
+
+        margin-right: 15px;
+
+        padding-left: 50px;
+
+        background-position: left center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: center;
+
+        font-size: 18px;
+
+        &_seen{
+            background-size: 40px 40px;
+            background-image: url(../img/slider/eye.svg);
+        }
+
+        &_comment{
+            background-size: 40px 33px;
+            background-image: url(../img/slider/comment.svg);
+        }
+    }
+
+    &__subtitle{
+        display: inline-flex;
+        width: 100%;
+
+        font-size: 22px;
+        color: $color-bg-second;
+    }
+}
+
+
+.rating{
+    width: 205px;
+    height: 55px;
+
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+
+
+    &__star{
+        width: 25px;
+        height: 25px;
+
+        margin-right: 5px;
+
+        background-image: url(../img/slider/star.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__value{
+        margin-left: 5px;
+        font-size: 22px;
+        color: $color-third;
     }
 }
